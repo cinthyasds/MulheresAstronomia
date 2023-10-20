@@ -2,7 +2,7 @@ import streamlit as st
 from PIL import Image
 
 st.set_page_config(
-    page_title="AstroEstrelasBR",
+    page_title="Estrelas brasileiras",
     page_icon=":rocket:",
     layout="wide",
 )
