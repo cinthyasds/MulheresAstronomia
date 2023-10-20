@@ -2,9 +2,9 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
-rel_fem = pd.read_csv("C:/Users/usuario/Downloads/st-multi_app/relatorio_feminino.csv")
+rel_fem = pd.read_csv("../relatorio_feminino.csv")
 
-rel_mas = pd.read_csv("C:/Users/usuario/Downloads/st-multi_app/relatorio_masculino.csv")
+rel_mas = pd.read_csv("../relatorio_masculino.csv")
 
 status_ano_per_ing = rel_mas.groupby(['Status', 'Ano/Período de ingresso']).size().reset_index(name='Quantidade')
 SAPIM = status_ano_per_ing
