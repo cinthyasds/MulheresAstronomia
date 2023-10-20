@@ -51,7 +51,7 @@ fig = px.pie(
 )
 
 fig.update_traces(
-    textfont=dict(size=16, color='white')
+    textfont=dict(size=12, color='white')
 )
 
 fig.update_layout(
