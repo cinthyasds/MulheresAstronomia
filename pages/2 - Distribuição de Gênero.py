@@ -22,27 +22,35 @@ rels[colunas] = rels[colunas].applymap(remove_pontos_e_numeros)
 rels['% Integralizado'] = rels['% Integralizado'].str.replace('%', '') 
 rels = rels.sort_values(by=['% Integralizado'])
 
-# Garanta que a coluna "Ano/Período de ingresso" seja do tipo numérico
+
 rels['Ano/Período de ingresso'] = pd.to_numeric(rels['Ano/Período de ingresso'], errors='coerce')
 
-# Título da página
+
 st.title('Distribuição de Gênero por Categoria e Ano')
 
-# Adicione um seletor para a categoria
+st.markdown("")
+st.markdown('<div style="text-align: justify;">Os gráficos a seguir nos permitem analisar a distribuição de participantes do gênero feminino e masculino no curso de Astrofísica da UFS. Esses gráficos são essenciais para destacar as mudanças significativas que ocorreram ao longo dos anos no número de mulheres matriculadas no curso.</div>', unsafe_allow_html=True)
+st.markdown("")
+st.markdown('**Os gráficos estão divididos por categorias qu são:**')
+st.write('* Excluído: Removido definitivamente.')
+st.write('* Cancelado: Interrupção antes da conclusão.')
+st.write('* Ativo: Em andamento.')
+st.write('* Pendente Cadastro: Processo de inscrição incompleto.')
+st.write('* Concluído: Curso finalizado.')
+st.write('* Trancado: Matrícula temporariamente pausada.')
+st.write('* Formando: Próximo da formatura.')
+st.markdown("")
+
 categorias_disponiveis = rels['Status'].unique()
 categoria_selecionada = st.selectbox('Selecione a categoria desejada:', categorias_disponiveis)
 
-# Adicione um seletor de ano com intervalo restrito de 2017 a 2023
-anos_disponiveis = list(range(2017, 2024))  # Intervalo de 2017 a 2023
+anos_disponiveis = list(range(2017, 2024))  
 ano_desejado = st.selectbox('Selecione o ano desejado:', anos_disponiveis)
 
-# Filtre os dados para a categoria e o ano selecionado
 dados_filtrados = rels[(rels['Status'] == categoria_selecionada) & (rels['Ano/Período de ingresso'] == ano_desejado)]
 
-# Calcule a contagem de gênero
 dados = dados_filtrados['Gênero'].value_counts()
 
-# Crie o gráfico de pizza
 fig = px.pie(
     names=dados.index,
     values=dados.values,
@@ -67,5 +75,4 @@ fig.update_layout(
     )
 )
 
-# Exiba o gráfico no Streamlit
 st.plotly_chart(fig)
