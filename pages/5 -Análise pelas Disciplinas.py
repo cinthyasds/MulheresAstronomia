@@ -3,7 +3,7 @@ import plotly.express as px
 import pandas as pd
 
 st.title('Participação nas disciplinas')
-st.markdown('<div style="text-align: justify;">\t Os gráficos abaixo trazem a particpação em algumas disciplinas do curso (disciplinas de período iniciais e da própria astrofísica.)</div>', unsafe_allow_html=True)
+st.markdown('<div style="text-align: justify;">\t Os gráficos abaixo trazem a particpação em algumas disciplinas do curso (disciplinas de períodos iniciais e da própria astrofísica.)</div>', unsafe_allow_html=True)
 st.markdown('')
 st.markdown('**Os gráficos estão divididos por situação:**')
 st.write('* Aprovado: Passou com sucesso.')
