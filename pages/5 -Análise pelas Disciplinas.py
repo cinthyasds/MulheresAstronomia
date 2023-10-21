@@ -2,6 +2,19 @@ import streamlit as st
 import plotly.express as px
 import pandas as pd
 
+st.title('Participação nas disciplinas')
+st.markdown('<div style="text-align: justify;">\t Os gráficos abaixo trazem a particpação em algumas disciplinas do curso (disciplinas de período iniciais e da própria astrofísica.)</div>', unsafe_allow_html=True)
+st.markdown('')
+st.markdown('**Os gráficos estão divididos por situação:**')
+st.write('* Aprovado: Passou com sucesso.')
+st.write('* Reprovado: Não atingiu o desempenho necessário.')
+st.write('* Rep. Media/Faltas: Necessita de melhoria em médias ou frequência.')
+st.write('* Trancado: Disciplina foi trancada (pausada) no determinado período.')
+st.write('* Desistência: Abandonou definitivamente a disciplina.')
+st.write('* Trancado: Matrícula temporariamente pausada.')
+st.write('* Formando: Próximo da formatura.')
+st.markdown('')
+
 ntabela_ok = pd.read_csv("ntabela_ok.csv")
 
 disciplinas_disponiveis = ['PROGRAMACAO IMPERATIVA','FISICA 1','FISICA 2','FISICA 3','FISICA E SOCIEDADE','FISICA MATEMATICA 1','FISICA MATEMATICA 2','LABORATORIO DE FISICA 1','PERSPECTIVAS EM ASTROFISICA','INTRODUCAO A ASTRONOMIA E ASTROFISICA','CALCULO NUMERICO','VETORES E GEOMETRIA ANALITICA','CALCULO A','CALCULO B','CALCULO C','CALCULO D','EQUACOES DIFERENCIAIS I','QUIMICA I']
