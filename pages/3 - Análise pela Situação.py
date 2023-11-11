@@ -5,7 +5,7 @@ import pandas as pd
 #from PIL import Image
 
 def main():
-	st.title('Situações de Andamento no Curso de Graduação em Astronomia')
+	st.title('Situações de Andamento no Curso de Graduação em Astronomia (UFS)')
 	#st.subheader('Dados', divider='violet')
 
 if __name__ == '__main__':
