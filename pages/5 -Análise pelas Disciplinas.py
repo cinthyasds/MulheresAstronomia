@@ -13,6 +13,7 @@ st.write('* Trancado: Disciplina foi trancada (pausada) no determinado período.
 st.write('* Desistência: Abandonou definitivamente a disciplina.')
 st.write('* Trancado: Matrícula temporariamente pausada.')
 st.write('* Formando: Próximo da formatura.')
+st.markdown('<div style="text-align: justify;">\tPara a UFRJ, só estão disponíveis 2 situações: Aprovado e Reprovado, dessa forma a análise de quantidades de pessoas do gênero feminino e masculino nas disciplinas torna-se mais incerta, uma vez que não há quantidades de trancamento e desistência informados.</div>', unsafe_allow_html=True)
 st.markdown('')
 
 #UFS
