@@ -13,6 +13,8 @@ st.markdown('<div style="text-align: justify;">\t A seguir são apresentados 2 g
 #st.subheader('Causas da Desigualdade de Gênero na Ciência:', divider='violet')
 #st.markdown("")
 
+#UFS
+
 conta_mas2 = pd.read_csv('conta_mas2.csv')
 conta_fem2 = pd.read_csv('conta_fem2.csv')
 
@@ -22,7 +24,7 @@ conta_mas2_grouped = conta_mas2.groupby(['Ano/Período de ingresso', 'Status'])[
 
 fig = px.scatter(conta_fem2_grouped, x='Ano/Período de ingresso', y='Contagem Feminino', color='Status',
                  labels={'Contagem Feminino': 'Quantidade', 'Ano/Período de ingresso': 'Ano'},
-                 title='Quantidade por Status e Ano - Feminino')
+                 title='Quantidade por Status e Ano - Feminino (UFS)')
 
 fig.update_layout(
     xaxis_title='Ano',
@@ -37,7 +39,44 @@ st.plotly_chart(fig)
 
 fig = px.scatter(conta_mas2_grouped, x='Ano/Período de ingresso', y='Contagem Masculino', color='Status',
                  labels={'Contagem Masculino': 'Quantidade', 'Ano/Período de ingresso': 'Ano'},
-                 title='Quantidade por Status e Ano - Masculino')
+                 title='Quantidade por Status e Ano - Masculino (UFS)')
+
+fig.update_layout(
+    xaxis_title='Ano',
+    yaxis_title='Quantidade',
+    font=dict(family='Arial', color='white'),
+    #plot_bgcolor='white'
+)
+
+st.plotly_chart(fig)
+
+#UFRJ
+
+nconta_masufrj = pd.read_csv('nconta_masufrj.csv')
+nconta_femufrj = pd.read_csv('nconta_femufrj.csv')
+
+
+nconta_femufrj_grouped = nconta_femufrj.groupby(['Ano/Período de ingresso', 'Status'])['Contagem Feminino'].sum().reset_index()
+nconta_masufrj_grouped = nconta_masufrj.groupby(['Ano/Período de ingresso', 'Status'])['Contagem Masculino'].sum().reset_index()
+
+fig = px.scatter(nconta_femufrj_grouped, x='Ano/Período de ingresso', y='Contagem Feminino', color='Status',
+                 labels={'Contagem Feminino': 'Quantidade', 'Ano/Período de ingresso': 'Ano'},
+                 title='Quantidade por Status e Ano - Feminino (UFRJ)')
+
+fig.update_layout(
+    xaxis_title='Ano',
+    yaxis_title='Quantidade',
+    font=dict(family='Arial', color='white'),
+    #plot_bgcolor='white'
+)
+
+st.plotly_chart(fig)
+
+###############################################
+
+fig = px.scatter(nconta_masufrj_grouped, x='Ano/Período de ingresso', y='Contagem Masculino', color='Status',
+                 labels={'Contagem Masculino': 'Quantidade', 'Ano/Período de ingresso': 'Ano'},
+                 title='Quantidade por Status e Ano - Masculino (UFRJ)')
 
 fig.update_layout(
     xaxis_title='Ano',
