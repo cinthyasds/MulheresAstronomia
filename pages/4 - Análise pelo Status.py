@@ -9,7 +9,7 @@ def main():
 
 if __name__ == '__main__':
 	main()
-st.markdown('<div style="text-align: justify;">\t A seguir são apresentados 2 gráficos, os quais expõem a distribuição de pessoas do gênero feminino e masculino por status, os quais são: concluído, ativo e formando.</div>', unsafe_allow_html=True)
+st.markdown('<div style="text-align: justify;">\t A seguir são apresentados 4 gráficos, que expõem a distribuição de pessoas do gênero feminino e masculino por status, os quais são: concluído, ativo e formando para a UFS e concluído, ativo e cancelada para a UFRJ.</div>', unsafe_allow_html=True)
 #st.subheader('Causas da Desigualdade de Gênero na Ciência:', divider='violet')
 #st.markdown("")
 
