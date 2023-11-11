@@ -68,7 +68,7 @@ st.plotly_chart(generate_chart(selected_disciplina, selected_situacao))
 
 st.subheader('Disciplinas UFRJ')
 
-rjtabela_ok = pd.read_csv("C:/Users/usuario/Downloads/st-multi_app/ufrjtabela_ok.csv")
+rjtabela_ok = pd.read_csv("ufrjtabela_ok.csv")
 
 disciplinas_disponiveis = ['FISICA EXPERIMENTAL I','FISICA I','COMPUTACAO I','CALCULO DIFERENCIAL E INTEGRAL I','INTRODUCAO A ASTRONOMIA','FISICA EXPERIMENTAL II','FISICA II','CALCULO DIFERENCIAL E INTEGRAL II','ALGEBRA LINEAR II','ASTRONOMIA ESFERICA','FISICA III','FISICA EXPERIMENTAL III','CALCULO DIFERENCIAL E INTEGRAL III','INTRODUCAO A ESTATISTICA ','LABORATORIO DE ASTRONOMIA','METODOS COMPUTACIONAIS EM ASTRONOMIA ']
 
