@@ -8,7 +8,7 @@ def main():
 if __name__ == '__main__':
 	main()
 
-st.markdown('A desigualdade de gênero é a disparidade entre homens e mulheres no acesso a oportunidades, recursos e reconhecimento em uma determinada área. Na ciência, essa desigualdade se manifesta de várias maneiras, incluindo a sub-representação de mulheres em cargos de liderança, menor visibilidade nas publicações e palestras e desigualdade salarial.</div>', unsafe_allow_html=True)
+st.markdown('A desigualdade de gênero é a disparidade entre homens e mulheres no acesso a oportunidades, recursos e reconhecimento em uma determinada área. Na ciência como na física e na astronomia é um problema persistente que tem sido observado em várias partes do mundo e ao longo da história. Essa desigualdade se manifesta de várias maneiras, incluindo a sub-representação de mulheres em cargos de liderança, menor visibilidade nas publicações e palestras e desigualdade salarial.</div>', unsafe_allow_html=True)
 st.subheader('Causas da Desigualdade de Gênero na Ciência:', divider='violet')
 st.markdown("")
 st.write('* Viés de Gênero: Muitas vezes, existe um viés de gênero inconsciente que influencia as decisões de contratação, promoção e financiamento. Isso pode resultar em mulheres sendo subavaliadas ou subestimadas em relação aos homens.')
