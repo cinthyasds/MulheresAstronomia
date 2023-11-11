@@ -41,6 +41,10 @@ st.write('* Trancado: Matrícula temporariamente pausada.')
 st.write('* Formando: Próximo da formatura.')
 st.markdown("")
 
+#UFS 
+
+st.subheader('Distribuição de gênero UFS')
+
 categorias_disponiveis = rels['Status'].unique()
 categoria_selecionada = st.selectbox('Selecione a categoria desejada:', categorias_disponiveis)
 
@@ -76,3 +80,52 @@ fig.update_layout(
 )
 
 st.plotly_chart(fig)
+
+#UFRJ
+
+st.subheader('Distribuição de gênero UFRJ')
+
+rjdist = pd.read_csv("rjdist_genero.csv")
+
+rjcategorias_disponiveis = rjdist['Status'].unique()
+rjcategoria_selecionada = st.selectbox('Para a UFRJ, selecione a categoria desejada:', rjcategorias_disponiveis)
+
+rjanos_disponiveis = list(range(2017, 2024))  
+rjano_desejado = st.selectbox('Selecione o ano desejado (UFRJ):', rjanos_disponiveis)
+
+rjdados_filtrados = rjdist[(rjdist['Status'] == rjcategoria_selecionada) & (rjdist['Ano/Período de ingresso'] == rjano_desejado)]
+
+rjdados = rjdados_filtrados['qtd']
+
+fig = px.pie(
+    values=rjdados,
+    names=rjdados_filtrados['Gênero'],
+    title=f'Distribuição de Gênero para a Categoria "{rjcategoria_selecionada}" em {rjano_desejado} UFRJ',
+    color_discrete_sequence=['gray', 'mediumpurple']
+)
+
+fig.update_traces(
+    textinfo='percent+label',
+    textfont=dict(size=16, color='white')
+)
+
+fig.update_layout(
+    legend=dict(
+        x=0.9,
+        y=1.0,
+        font=dict(family='Arial', size=16, color='white')
+    ),
+    title=dict(
+        x=0.5,
+        y=0.9,
+        font=dict(family='Arial', size=20, color='black')
+    )
+)
+
+st.plotly_chart(fig)
+
+
+
+
+
+
