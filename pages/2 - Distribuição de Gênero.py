@@ -75,7 +75,7 @@ fig.update_layout(
     title=dict(
         x=0.0,
         y=0.9,
-        font=dict(family='Arial', size=16, color='white')
+        font=dict(family='Arial', size=20, color='white')
     )
 )
 
