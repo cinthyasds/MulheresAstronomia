@@ -13,7 +13,7 @@ st.markdown('<div style="text-align: justify;">\t Outro dado interessante de ser
 
 #UFS
 
-integralizacao = pd.read_csv('C:/Users/usuario/Downloads/st-multi_app/integralizacaoufs.csv')
+integralizacao = pd.read_csv('integralizacaoufs.csv')
 
 cores = {'Feminino': 'mediumpurple', 'Masculino': 'gray'}
 
@@ -37,7 +37,7 @@ st.plotly_chart(fig)
 #UFRJ
 
 
-integralizacao = pd.read_csv('C:/Users/usuario/Downloads/st-multi_app/integralizacaoufrj.csv')
+integralizacao = pd.read_csv('integralizacaoufrj.csv')
 
 cores = {'Feminino': 'mediumpurple', 'Masculino': 'gray'}
 
