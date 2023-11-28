@@ -29,7 +29,7 @@ rels['Ano/Período de ingresso'] = pd.to_numeric(rels['Ano/Período de ingresso'
 st.title('Distribuição de Gênero por Categoria e Ano')
 
 st.markdown("")
-st.markdown('<div style="text-align: justify;">Os gráficos a seguir nos permitem analisar a distribuição de participantes do gênero feminino e masculino no curso de Astrofísica da UFS. Esses gráficos são essenciais para destacar as mudanças significativas que ocorreram ao longo dos anos no número de mulheres matriculadas no curso.</div>', unsafe_allow_html=True)
+st.markdown('<div style="text-align: justify;">Os gráficos a seguir nos permitem analisar a distribuição de participantes do gênero feminino e masculino no curso de Astrofísica da UFS e da UFRJ. Esses gráficos são essenciais para destacar as mudanças significativas que ocorreram ao longo dos anos no número de mulheres matriculadas no curso.</div>', unsafe_allow_html=True)
 st.markdown("")
 st.markdown('**Os gráficos estão divididos por categorias qu são:**')
 st.write('* Excluído: Removido definitivamente.')
