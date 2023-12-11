@@ -53,8 +53,8 @@ st.plotly_chart(fig)
 
 #UFRJ
 
-nconta_masufrj = pd.read_csv('C:/Users/usuario/Downloads/st-multi_app/contagem_masrjNUMERO.csv')
-nconta_femufrj = pd.read_csv('C:/Users/usuario/Downloads/st-multi_app/contagem_femrjNUMERO.csv')
+nconta_masufrj = pd.read_csv('contagem_masrjNUMERO.csv')
+nconta_femufrj = pd.read_csv('contagem_femrjNUMERO.csv')
 
 
 nconta_femufrj_grouped = nconta_femufrj.groupby(['Ano/Período de ingresso', 'Status'])['Contagem_Feminino'].sum().reset_index()
