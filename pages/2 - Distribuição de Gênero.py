@@ -6,10 +6,10 @@ st.markdown("")
 st.title('Gráfico de barras da distribuição de gênero por ano para as duas universidades')
 st.markdown("")
 
-conta_mas2 = pd.read_csv('C:/Users/usuario/Downloads/st-multi_app/conta_masufsNUMERO.csv')
-conta_fem2 = pd.read_csv('C:/Users/usuario/Downloads/st-multi_app/conta_femufsNUMERO.csv')
-nconta_masufrj = pd.read_csv('C:/Users/usuario/Downloads/st-multi_app/contagem_masrjNUMERO.csv')
-nconta_femufrj = pd.read_csv('C:/Users/usuario/Downloads/st-multi_app/contagem_femrjNUMERO.csv')
+conta_mas2 = pd.read_csv('conta_masufsNUMERO.csv')
+conta_fem2 = pd.read_csv('conta_femufsNUMERO.csv')
+nconta_masufrj = pd.read_csv('contagem_masrjNUMERO.csv')
+nconta_femufrj = pd.read_csv('contagem_femrjNUMERO.csv')
 
 #UFS
 conta_fem2_2017 = conta_fem2[(conta_fem2['Ano/Período de ingresso'] == 2017)]
