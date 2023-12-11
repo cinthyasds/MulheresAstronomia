@@ -149,7 +149,7 @@ fig3 = px.bar(df, x='Ano', y=['Feminino_ufs', 'Masculino_ufs', 'Feminino_ufrj', 
 fig3.update_layout(
     xaxis=dict(tickangle=-45, tickmode='array'),
     legend_title='Porcentagem por gênero',
-    font=dict(family='Arial', color='black'),
+    font=dict(family='Arial', color='white'),
     barmode='group',
         #plot_bgcolor='white'
     )
@@ -160,7 +160,7 @@ for idx, row in df.iterrows():
             y=row['Feminino_ufs'],
             text=f"{row['Feminino_ufs']:.0f}%",
             showarrow=False,
-            font=dict(size=12, color='black'),
+            font=dict(size=12, color='white'),
             xanchor='right',
             yanchor='bottom',
             textangle=-45
@@ -170,7 +170,7 @@ for idx, row in df.iterrows():
             y=row['Masculino_ufs'],
             text=f"{row['Masculino_ufs']:.0f}%",
             showarrow=False,
-            font=dict(size=12, color='black'),
+            font=dict(size=12, color='white'),
             xanchor='center',
             yanchor='top',
             textangle=-45
@@ -181,7 +181,7 @@ for idx, row in df.iterrows():
             y=row['Feminino_ufrj'],
             text=f"{row['Feminino_ufrj']:.0f}%",
             showarrow=False,
-            font=dict(size=12, color='black'),
+            font=dict(size=12, color='white'),
             xanchor='center',
             yanchor='bottom',
             textangle=-45
@@ -193,7 +193,7 @@ for idx, row in df.iterrows():
             y=row['Masculino_ufrj'],
             text=f"{row['Masculino_ufrj']:.0f}%",
             showarrow=False,
-            font=dict(size=12, color='black'),
+            font=dict(size=12, color='white'),
             xanchor='left',
             yanchor='bottom',
             textangle=-45
