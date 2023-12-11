@@ -16,8 +16,8 @@ st.markdown('<div style="text-align: justify;">\t A seguir são apresentados 4 g
 
 #UFS
 
-conta_mas2 = pd.read_csv('C:/Users/usuario/Downloads/st-multi_app/conta_masufsNUMERO.csv')
-conta_fem2 = pd.read_csv('C:/Users/usuario/Downloads/st-multi_app/conta_femufsNUMERO.csv')
+conta_mas2 = pd.read_csv('conta_masufsNUMERO.csv')
+conta_fem2 = pd.read_csv('conta_femufsNUMERO.csv')
 
 
 conta_fem2_grouped = conta_fem2.groupby(['Ano/Período de ingresso', 'Status'])['Contagem_Feminino'].sum().reset_index()
