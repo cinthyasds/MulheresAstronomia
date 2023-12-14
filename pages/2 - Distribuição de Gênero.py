@@ -151,6 +151,8 @@ fig3.update_layout(
     legend_title='Porcentagem por gênero',
     font=dict(family='Arial', color='white'),
     barmode='group',
+    bargap=0.2,  
+    bargroupgap=0.1,
         #plot_bgcolor='white'
     )
 
