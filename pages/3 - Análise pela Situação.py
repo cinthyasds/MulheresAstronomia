@@ -53,6 +53,8 @@ def create_and_show_bar_chart(data, year):
         legend_title='Porcentagem por gênero',
         font=dict(family='Arial', color='white'),
         barmode='group',
+	bargap=0.2,  
+    	bargroupgap=0.1,
         #plot_bgcolor='white'
     )
 
