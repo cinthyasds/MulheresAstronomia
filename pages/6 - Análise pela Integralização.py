@@ -28,7 +28,8 @@ fig.update_layout(
     yaxis_title='Porcentagem (%)',
     legend_title='Gênero',
     barmode='group',
-    bargap=0.1  
+    bargap=0.2,  
+    bargroupgap=0.1,  
 )
 
 st.plotly_chart(fig)
